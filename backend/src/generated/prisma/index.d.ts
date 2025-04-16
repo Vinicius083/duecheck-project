@@ -3509,11 +3509,11 @@ export namespace Prisma {
 
   export type ConsultaWhereUniqueInput = Prisma.AtLeast<{
     id?: number
-    cpf?: string
     AND?: ConsultaWhereInput | ConsultaWhereInput[]
     OR?: ConsultaWhereInput[]
     NOT?: ConsultaWhereInput | ConsultaWhereInput[]
     user_id?: IntFilter<"Consulta"> | number
+    cpf?: StringFilter<"Consulta"> | string
     tipoDeVinculo?: StringFilter<"Consulta"> | string
     dataDeInicio?: DateTimeFilter<"Consulta"> | Date | string
     dataDeTermino?: DateTimeNullableFilter<"Consulta"> | Date | string | null
@@ -3523,7 +3523,7 @@ export namespace Prisma {
     createdAt?: DateTimeFilter<"Consulta"> | Date | string
     updatedAt?: DateTimeFilter<"Consulta"> | Date | string
     user?: XOR<UserScalarRelationFilter, UserWhereInput>
-  }, "id" | "cpf">
+  }, "id">
 
   export type ConsultaOrderByWithAggregationInput = {
     id?: SortOrder

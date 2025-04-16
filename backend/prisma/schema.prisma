@@ -27,7 +27,7 @@ model User {
 model Consulta {
   id            Int      @id @default(autoincrement())
   user_id       Int
-  cpf           String   @unique
+  cpf           String   
   tipoDeVinculo String
   dataDeInicio  DateTime
   dataDeTermino DateTime?
